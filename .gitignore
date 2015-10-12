@@ -1,3 +1,7 @@
+# OS X
+.DS_Store
+
+
 # Xcode
 #
 build/
@@ -28,6 +32,5 @@ DerivedData
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
+Carthage/Checkouts
 Carthage/Build
