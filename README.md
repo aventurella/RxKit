@@ -11,8 +11,8 @@ github "aventurella/RxKit"
 ## Events
 
 RxKit contains a simple event system conceptually similar to the one found
-in Backbone/Marionette in the JavaScript world. Delegates! I hear you
-roar. Yes, delegates, I have tried both ways, delegates and events and
+in `[Backbone][backbone]/[Marionette][marionette]` in the JavaScript world.
+Delegates! I hear you roar. Yes, delegates. I have tried both ways, delegates and events and
 I like events better for simple contrtoller -> controller communication.
 I used to be firmly on the delegate camp however if that syas anything.
 
@@ -94,3 +94,6 @@ obj2.listenTo(obj1, on: "foo"){ (_, data: Message) in
 
 obj1.trigger("foo", data: message)
 ```
+
+[backbone]: http://backbonejs.org/  "Backbone"
+[marionette]: http://marionettejs.com/  "Marionette"
