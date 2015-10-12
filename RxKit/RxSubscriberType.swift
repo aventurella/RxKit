@@ -18,7 +18,7 @@ extension RxSubscriberType{
         return DisposeBag()
     }
 
-    public func listenTo<T, U where T: RxPublisherType>(target: T, type: String, invoke: (T, U) -> ()){
+    public func listenTo<T, U where T: RxPublisherType>(target: T, on type: String, invoke: (T, U) -> ()){
         target
         .publisher
         .filter{
@@ -32,7 +32,7 @@ extension RxSubscriberType{
         .addDisposableTo(disposeBag)
     }
 
-    public func listenTo<T where T: RxPublisherType>(target: T, type: String, invoke: (T) -> ()){
+    public func listenTo<T where T: RxPublisherType>(target: T, on type: String, invoke: (T) -> ()){
         target
         .publisher
         .filter{
@@ -46,7 +46,7 @@ extension RxSubscriberType{
         .addDisposableTo(disposeBag)
     }
 
-    public func listenTo<T where T: RxPublisherType>(target: T, type: String, invoke: () -> ()){
+    public func listenTo<T where T: RxPublisherType>(target: T, on type: String, invoke: () -> ()){
         target
         .publisher
         .filter{

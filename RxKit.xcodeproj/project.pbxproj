@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		23F6B9D71BCBD0410072352B /* RxKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F6B9D61BCBD0410072352B /* RxKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23F6B9DE1BCBD0410072352B /* RxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F6B9D31BCBD0410072352B /* RxKit.framework */; settings = {ASSET_TAGS = (); }; };
 		23F6BA2C1BCBD0FF0072352B /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 23F6BA171BCBD0FF0072352B /* Common.xcconfig */; settings = {ASSET_TAGS = (); }; };
 		23F6BA2D1BCBD0FF0072352B /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 23F6BA191BCBD0FF0072352B /* Debug.xcconfig */; settings = {ASSET_TAGS = (); }; };
 		23F6BA2E1BCBD0FF0072352B /* Profile.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 23F6BA1A1BCBD0FF0072352B /* Profile.xcconfig */; settings = {ASSET_TAGS = (); }; };
@@ -29,12 +28,13 @@
 		23F6BA461BCBD1A00072352B /* RxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6BA401BCBD1A00072352B /* RxObject.swift */; settings = {ASSET_TAGS = (); }; };
 		23F6BA471BCBD1A00072352B /* RxEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6BA411BCBD1A00072352B /* RxEvent.swift */; settings = {ASSET_TAGS = (); }; };
 		23F6BA481BCBD1A00072352B /* RxPublisherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6BA421BCBD1A00072352B /* RxPublisherType.swift */; settings = {ASSET_TAGS = (); }; };
-		23F6BA491BCBD1A00072352B /* RxSubscriberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6BA431BCBD1A00072352B /* RxSubscriberType.swift */; settings = {ASSET_TAGS = (); }; };
 		23F6BA4A1BCBD1A00072352B /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6BA451BCBD1A00072352B /* RxViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		23F6BA4E1BCBD2B20072352B /* RxObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6BA4D1BCBD2B20072352B /* RxObjectTest.swift */; settings = {ASSET_TAGS = (); }; };
 		23F6BA511BCBD7230072352B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F6BA4F1BCBD6660072352B /* RxSwift.framework */; };
 		23F6BA531BCBD8860072352B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F6BA4F1BCBD6660072352B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23F6BA551BCBD8F60072352B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F6BA4F1BCBD6660072352B /* RxSwift.framework */; };
+		23F6BA581BCBDFCD0072352B /* RxKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F6B9D31BCBD0410072352B /* RxKit.framework */; };
+		23F6BA5A1BCBE0280072352B /* RxSubscriberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6BA591BCBE0280072352B /* RxSubscriberType.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,10 +87,10 @@
 		23F6BA401BCBD1A00072352B /* RxObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxObject.swift; sourceTree = "<group>"; };
 		23F6BA411BCBD1A00072352B /* RxEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxEvent.swift; sourceTree = "<group>"; };
 		23F6BA421BCBD1A00072352B /* RxPublisherType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxPublisherType.swift; sourceTree = "<group>"; };
-		23F6BA431BCBD1A00072352B /* RxSubscriberType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSubscriberType.swift; sourceTree = "<group>"; };
 		23F6BA451BCBD1A00072352B /* RxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
-		23F6BA4D1BCBD2B20072352B /* RxObjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxObjectTest.swift; path = ../RxKit/RxObjectTest.swift; sourceTree = "<group>"; };
+		23F6BA4D1BCBD2B20072352B /* RxObjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxObjectTest.swift; sourceTree = "<group>"; };
 		23F6BA4F1BCBD6660072352B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		23F6BA591BCBE0280072352B /* RxSubscriberType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSubscriberType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F6BA581BCBDFCD0072352B /* RxKit.framework in Frameworks */,
 				23F6BA511BCBD7230072352B /* RxSwift.framework in Frameworks */,
-				23F6B9DE1BCBD0410072352B /* RxKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,10 +138,10 @@
 			isa = PBXGroup;
 			children = (
 				23F6BA3F1BCBD1A00072352B /* Foundation */,
-				23F6BA411BCBD1A00072352B /* RxEvent.swift */,
-				23F6BA421BCBD1A00072352B /* RxPublisherType.swift */,
-				23F6BA431BCBD1A00072352B /* RxSubscriberType.swift */,
 				23F6BA441BCBD1A00072352B /* UIKit */,
+				23F6BA411BCBD1A00072352B /* RxEvent.swift */,
+				23F6BA591BCBE0280072352B /* RxSubscriberType.swift */,
+				23F6BA421BCBD1A00072352B /* RxPublisherType.swift */,
 				23F6B9D61BCBD0410072352B /* RxKit.h */,
 				23F6B9D81BCBD0410072352B /* Info.plist */,
 			);
@@ -371,7 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23F6BA471BCBD1A00072352B /* RxEvent.swift in Sources */,
-				23F6BA491BCBD1A00072352B /* RxSubscriberType.swift in Sources */,
+				23F6BA5A1BCBE0280072352B /* RxSubscriberType.swift in Sources */,
 				23F6BA481BCBD1A00072352B /* RxPublisherType.swift in Sources */,
 				23F6BA461BCBD1A00072352B /* RxObject.swift in Sources */,
 				23F6BA4A1BCBD1A00072352B /* RxViewController.swift in Sources */,
@@ -574,6 +574,7 @@
 				23F6B9E91BCBD0410072352B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23F6B9EA1BCBD0410072352B /* Build configuration list for PBXNativeTarget "RxKitTests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +583,7 @@
 				23F6B9EC1BCBD0410072352B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

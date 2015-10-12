@@ -14,7 +14,7 @@ class RxObjectText: XCTestCase {
     func testEventWithData() {
         let obj = RxObject()
 
-        obj.listenTo(obj, type: "foo"){ (sender: RxObject, data: String) in
+        obj.listenTo(obj, on: "foo"){ (sender: RxObject, data: String) in
             XCTAssert(sender == obj)
             XCTAssert(data == "lucy")
         }
@@ -25,7 +25,7 @@ class RxObjectText: XCTestCase {
     func testEventWithDataIgnoreSender() {
         let obj = RxObject()
 
-        obj.listenTo(obj, type: "foo"){ (_, data: String) in
+        obj.listenTo(obj, on: "foo"){ (_, data: String) in
             XCTAssert(data == "lucy")
         }
 
@@ -35,7 +35,7 @@ class RxObjectText: XCTestCase {
     func testEventWithoutData() {
         let obj = RxObject()
 
-        obj.listenTo(obj, type: "foo"){ (sender: RxObject) in
+        obj.listenTo(obj, on: "foo"){ (sender: RxObject) in
             XCTAssert(sender == obj)
         }
 
@@ -46,7 +46,7 @@ class RxObjectText: XCTestCase {
         let obj = RxObject()
         var value = 0
 
-        obj.listenTo(obj, type: "foo"){
+        obj.listenTo(obj, on: "foo"){
             value++
         }
 
@@ -58,15 +58,15 @@ class RxObjectText: XCTestCase {
         let obj = RxObject()
         var value = 0
 
-        obj.listenTo(obj, type: "foo"){
+        obj.listenTo(obj, on: "foo"){
             value++
         }
 
-        obj.listenTo(obj, type: "bar"){
+        obj.listenTo(obj, on: "bar"){
             value++
         }
 
-        obj.listenTo(obj, type: "baz"){
+        obj.listenTo(obj, on: "baz"){
             value++
         }
 
