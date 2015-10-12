@@ -11,7 +11,7 @@ github "aventurella/RxKit"
 ## Events
 
 RxKit contains a simple event system conceptually similar to the one found
-in `[Backbone][backbone]/[Marionette][marionette]` in the JavaScript world.
+in [Backbone][backbone]/[Marionette][marionette] in the JavaScript world.
 Delegates! I hear you roar. Yes, delegates. I have tried both ways, delegates and events and
 I like events better for simple contrtoller -> controller communication.
 I used to be firmly on the delegate camp however if that syas anything.
