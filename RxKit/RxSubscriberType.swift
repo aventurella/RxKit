@@ -18,8 +18,44 @@ extension RxSubscriberType{
         return DisposeBag()
     }
 
-    public func listenTo<T, U where T: RxPublisherType>(target: T, on type: String, invoke: (T, U) -> ()){
-        target
+    public func listenToOnce<T where T: RxPublisherType>(target: T, on type: String, invoke:() -> ()) -> Disposable {
+        var disposable: Disposable?
+
+        let handler = {
+            disposable?.dispose()
+            invoke()
+        }
+
+        disposable = listenTo(target, on: type, invoke: handler)
+        return disposable!
+    }
+
+    public func listenToOnce<T where T: RxPublisherType>(target: T, on type: String, invoke:(T) -> ()) -> Disposable {
+        var disposable: Disposable?
+
+        let handler = {(sender: T) in
+            disposable?.dispose()
+            invoke(sender)
+        }
+
+        disposable = listenTo(target, on: type, invoke: handler)
+        return disposable!
+    }
+
+    public func listenToOnce<T, U where T: RxPublisherType>(target: T, on type: String, invoke:(T, U) -> ()) -> Disposable {
+        var disposable: Disposable?
+
+        let handler = {(sender: T, data: U) in
+            disposable?.dispose()
+            invoke(sender, data)
+        }
+
+        disposable = listenTo(target, on: type, invoke: handler)
+        return disposable!
+    }
+
+    public func listenTo<T, U where T: RxPublisherType>(target: T, on type: String, invoke: (T, U) -> ()) -> Disposable {
+        let disposable = target
         .publisher
         .filter{
             let evt = $0 as! RxEvent<T>
@@ -29,11 +65,14 @@ extension RxSubscriberType{
             let evt = $0 as! RxEvent<T>
             invoke(evt.sender, evt.data as! U)
         }
-        .addDisposableTo(disposeBag)
+
+        disposable.addDisposableTo(disposeBag)
+        return disposable
+
     }
 
-    public func listenTo<T where T: RxPublisherType>(target: T, on type: String, invoke: (T) -> ()){
-        target
+    public func listenTo<T where T: RxPublisherType>(target: T, on type: String, invoke: (T) -> ()) -> Disposable {
+        let disposable = target
         .publisher
         .filter{
             let evt = $0 as! RxEvent<T>
@@ -43,11 +82,13 @@ extension RxSubscriberType{
             let evt = $0 as! RxEvent<T>
             invoke(evt.sender)
         }
-        .addDisposableTo(disposeBag)
+
+        disposable.addDisposableTo(disposeBag)
+        return disposable
     }
 
-    public func listenTo<T where T: RxPublisherType>(target: T, on type: String, invoke: () -> ()){
-        target
+    public func listenTo<T where T: RxPublisherType>(target: T, on type: String, invoke: () -> ()) -> Disposable {
+        let disposable = target
         .publisher
         .filter{
             let evt = $0 as! RxEvent<T>
@@ -56,6 +97,8 @@ extension RxSubscriberType{
         .subscribeNext{ _ in
             invoke()
         }
-        .addDisposableTo(disposeBag)
+
+        disposable.addDisposableTo(disposeBag)
+        return disposable
     }
 }
